@@ -13,3 +13,10 @@ Thermostat.prototype.decrease = function() {
 Thermostat.prototype.reset = function () {
 this.temperature = 20;
 };
+
+Thermostat.prototype.minimum = function() {
+  if(this.temperature < 10){
+
+  throw  new Error("The temperature cannot be set below 10");
+};
+};

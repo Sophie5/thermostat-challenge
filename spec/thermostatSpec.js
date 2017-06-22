@@ -22,4 +22,15 @@ describe("Thermostat", function() {
     thermostat.reset();
     expect(thermostat.temperature).toEqual(20);
   })
+
+describe("temperature limits", function() {
+
+  it("should throw an error if tries to decrease past 10", function(){
+    thermostat.temperature = 10;
+    thermostat.decrease();
+    expect(function(){thermostat.minimum()}).toThrowError("The temperature cannot be set below 10")
+  });
+
+});
+
 });
