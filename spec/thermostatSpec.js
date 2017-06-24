@@ -42,7 +42,7 @@ describe("temperature limits", function() {
   });
 
   it("should throw an error if the temperature increases past 32 if powerSaving off", function() {
-    
+    thermostat.powerSaving = false;
     thermostat.temperature = 32;
     thermostat.increase();
     expect(function(){thermostat.maximum()}).toThrowError("The temperature can't be set above 32 with power saving off")
