@@ -4,15 +4,15 @@ function Thermostat() {
 }
 
 Thermostat.prototype.increase = function() {
-  this.temperature += 1;
+  return this.temperature += 1;
 };
 
 Thermostat.prototype.decrease = function() {
-  this.temperature -= 1;
+  return this.temperature -= 1;
 };
 
 Thermostat.prototype.reset = function () {
-this.temperature = 20;
+return this.temperature = 20;
 };
 
 Thermostat.prototype.minimum = function() {
