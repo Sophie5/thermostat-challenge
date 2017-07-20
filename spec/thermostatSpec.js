@@ -52,16 +52,16 @@ describe("temperature limits", function() {
 
 it("if the temperature is below 18 it should return low power usage", function() {
   thermostat.temperature = 10;
-  expect(thermostat.energyUsage()).toEqual("Power: Low-usage")
+  expect(thermostat.energyUsage()).toEqual("Power usage: Low")
 });
 
 it("if the temperature is below 25 it should return medium power usage", function() {
   thermostat.temperature = 18;
-  expect(thermostat.energyUsage()).toEqual("Power: Medium-usage")
+  expect(thermostat.energyUsage()).toEqual("Power usage: Medium")
 });
 
 it("if the temperature is above 25 it should return high power usage", function() {
   thermostat.temperature = 25;
-  expect(thermostat.energyUsage()).toEqual("Power: High-usage")
+  expect(thermostat.energyUsage()).toEqual("Power uage: High")
 });
 });

@@ -10,8 +10,23 @@ $('#increase').click(function(){
 });
 
 $('#decrease').click(function(){
-    thermostat.minimum();
+  thermostat.minimum();
   thermostat.decrease();
   $('#currentTemperature').html(thermostat.temperature);
+});
+
+$('#reset').click(function(){
+  thermostat.reset();
+  $('#currentTemperature').html(thermostat.temperature);
+});
+
+$('#powerSaving').click(function(){
+  thermostat.powerSaving === true? thermostat.powerSaving = false : thermostat.powerSaving = true;
+  thermostat.maximum();
+});
+
+$('#energyUsage').click(function(){
+  thermostat.energyUsage();
+  $('#powerUsage').html(thermostat.energyUsage());
 });
 });
