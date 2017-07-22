@@ -34,7 +34,7 @@ Thermostat.prototype.maximum = function () {
   }
 };
 
-Thermostat.prototype.energyUsage = function () {
+Thermostat.prototype.powerUsage = function () {
   if(this.temperature < 18) {
     return "Power usage: Low";
   }

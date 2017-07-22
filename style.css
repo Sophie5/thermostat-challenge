@@ -1,0 +1,73 @@
+#body{
+  background-image: url(images/thermostat.png);
+  background-size: 900px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 300px, 500px;
+}
+
+#currentTemperature{
+  position: absolute;
+  left: 700px;
+  font-size: 100px;
+  top: 290px;
+}
+
+#energyUsage{
+  position: absolute;
+  left: 650px;
+  top: 510px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#increase{
+  position: absolute;
+  left: 965px;
+  top: 268px;
+  font-size: 50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+#decrease{
+  position: absolute;
+  left: 970px;
+  top: 347px;
+  font-size: 60px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+#reset{
+  position: absolute;
+  left: 477px;
+  top: 272px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+
+#powerSaving{
+  position: absolute;
+  left: 477px;
+  top: 330px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+#powerUsage{
+  position: absolute;
+  left: 480px;
+  top: 390px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 13px;
+}

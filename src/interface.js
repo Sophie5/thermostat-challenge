@@ -25,8 +25,8 @@ $('#powerSaving').click(function(){
   thermostat.maximum();
 });
 
-$('#energyUsage').click(function(){
-  thermostat.energyUsage();
-  $('#powerUsage').html(thermostat.energyUsage());
+$('#powerUsage').click(function(){
+  thermostat.powerUsage();
+  $('#energyUsage').html(thermostat.powerUsage());
 });
 });
