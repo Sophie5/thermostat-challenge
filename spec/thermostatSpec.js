@@ -27,41 +27,43 @@ describe("Thermostat", function() {
     expect(thermostat.temperature).toEqual(20);
   })
 
-describe("temperature limits", function() {
+  describe("temperature limits", function() {
 
-  it("should throw an error if tries to decrease past 10", function(){
-    thermostat.temperature = 10;
-    thermostat.decrease();
-    expect(function(){thermostat.minimum()}).toThrowError("The temperature cannot be set below 10")
+    it("should throw an error if tries to decrease past 10", function(){
+      thermostat.temperature = 10;
+      thermostat.decrease();
+      expect(function(){thermostat.minimum()}).toThrowError("The temperature cannot be set below 10")
+    });
+
+    it("should throw an error if the temperature increases past 25 if powerSaving on", function() {
+      thermostat.temperature = 25;
+      thermostat.increase();
+      expect(function(){thermostat.maximum()}).toThrowError("The temperature can't be set above 25 with power saving on")
+    });
+
+    it("should throw an error if the temperature increases past 32 if powerSaving off", function() {
+      thermostat.powerSaving = false;
+      thermostat.temperature = 32;
+      thermostat.increase();
+      expect(function(){thermostat.maximum()}).toThrowError("The temperature can't be set above 32 with power saving off")
+
+    });
   });
 
-  it("should throw an error if the temperature increases past 25 if powerSaving on", function() {
-    thermostat.temperature = 25;
-    thermostat.increase();
-    expect(function(){thermostat.maximum()}).toThrowError("The temperature can't be set above 25 with power saving on")
+  describe("power usage", function(){
+    it("if the temperature is below 18 it should return low power usage", function() {
+      thermostat.temperature = 10;
+      expect(thermostat.powerUsage()).toEqual("Power usage: Low")
+    });
+
+    it("if the temperature is below 25 it should return medium power usage", function() {
+      thermostat.temperature = 18;
+      expect(thermostat.powerUsage()).toEqual("Power usage: Medium")
+    });
+
+    it("if the temperature is above 25 it should return high power usage", function() {
+      thermostat.temperature = 25;
+      expect(thermostat.powerUsage()).toEqual("Power usage: High")
+    });
   });
-
-  it("should throw an error if the temperature increases past 32 if powerSaving off", function() {
-    thermostat.powerSaving = false;
-    thermostat.temperature = 32;
-    thermostat.increase();
-    expect(function(){thermostat.maximum()}).toThrowError("The temperature can't be set above 32 with power saving off")
-
-});
-});
-
-it("if the temperature is below 18 it should return low power usage", function() {
-  thermostat.temperature = 10;
-  expect(thermostat.energyUsage()).toEqual("Power usage: Low")
-});
-
-it("if the temperature is below 25 it should return medium power usage", function() {
-  thermostat.temperature = 18;
-  expect(thermostat.energyUsage()).toEqual("Power usage: Medium")
-});
-
-it("if the temperature is above 25 it should return high power usage", function() {
-  thermostat.temperature = 25;
-  expect(thermostat.energyUsage()).toEqual("Power uage: High")
-});
 });

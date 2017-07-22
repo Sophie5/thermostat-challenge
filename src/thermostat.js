@@ -1,6 +1,7 @@
 function Thermostat() {
   this.temperature = 20;
   this.powerSaving = true;
+
 }
 
 Thermostat.prototype.increase = function() {
@@ -23,15 +24,17 @@ Thermostat.prototype.minimum = function() {
 };
 
 Thermostat.prototype.maximum = function () {
-  if(this.temperature > 24 && this.powerSaving == true) {
-     alert("The temperature can't be set above 25 with power saving on");
-     throw  new Error("The temperature can't be set above 25 with power saving on");
-
-  }
-  else if(this.temperature > 31 && this.powerSaving == false) {
-    alert("The temperature can't be set above 32 with power saving off");
-     throw new Error("The temperature can't be set above 32 with power saving off");
-  }
+    this.message = document.getElementById('message');
+    message.innerHTML = "";
+  try{
+  if(this.temperature > 24 && this.powerSaving == true)
+  throw new Error ("The temperature can't be set above 25 with power saving on");
+  if(this.temperature > 31 && this.powerSaving == false)
+     throw new Error ("The temperature can't be set above 32 with power saving off");
+}
+catch(err){
+  message.innerHTML= err
+}
 };
 
 Thermostat.prototype.powerUsage = function () {
