@@ -26,11 +26,11 @@ Thermostat.prototype.minimum = function() {
 Thermostat.prototype.maximum = function () {
   if(this.temperature > 25 && this.powerSaving == true) {
      this.temperature = 25;
-      this.errorMessage = "The temperature can't be set above 25 with power saving on";
+      return this.errorMessage = "The temperature can't be set above 25 with power saving on";
   }
   else if(this.temperature > 32 && this.powerSaving == false) {
      this.temperature = 32;
-     this.errorMessage= "The temperature can't be set above 32 with power saving off";
+     return this.errorMessage= "The temperature can't be set above 32 with power saving off";
   }
 };
 
