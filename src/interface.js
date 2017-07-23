@@ -4,14 +4,14 @@ $(document).ready(function() {
  $('#currentTemperature').html(thermostat.temperature);
 
 $('#increase').click(function(){
-  thermostat.maximum();
   thermostat.increase();
+  thermostat.maximum();
   $('#currentTemperature').html(thermostat.temperature);
 });
 
 $('#decrease').click(function(){
-  thermostat.minimum();
   thermostat.decrease();
+  thermostat.minimum();
   $('#currentTemperature').html(thermostat.temperature);
 });
 
