@@ -79,3 +79,10 @@
   font-size: 15px;
   font-weight: bold;
 }
+
+#ecoSymbol{
+  position: absolute;
+  left: 590px;
+  top: 255px;
+  height: 60px;
+}
