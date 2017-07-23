@@ -2,11 +2,14 @@ $(document).ready(function() {
   var thermostat = new Thermostat();
 
  $('#currentTemperature').html(thermostat.temperature);
+ $('#errorMessage').html(thermostat.errorMessage);
+
 
 $('#increase').click(function(){
   thermostat.increase();
   thermostat.maximum();
   $('#currentTemperature').html(thermostat.temperature);
+  $('#errorMessage').html(thermostat.errorMessage);
 });
 
 $('#decrease').click(function(){
