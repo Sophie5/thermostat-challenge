@@ -1,7 +1,8 @@
+
 function Thermostat() {
   this.temperature = 20;
   this.powerSaving = true;
-  this.errorMessage = "";
+  this.eco = document.getElementById('ecoSymbol')
 }
 
 Thermostat.prototype.increase = function() {
@@ -45,3 +46,14 @@ Thermostat.prototype.powerUsage = function () {
     return "Power usage: High";
   }
 };
+
+Thermostat.prototype.toggleEcoSymbol = function () {
+
+  if(this.powerSaving === true){
+    return this.eco.style.display = 'block'
+
+  }
+  else{
+    return this.eco.style.display = 'none'
+  }
+ };

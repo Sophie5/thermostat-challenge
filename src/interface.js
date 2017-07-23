@@ -26,6 +26,7 @@ $('#reset').click(function(){
 $('#powerSaving').click(function(){
   thermostat.powerSaving === true? thermostat.powerSaving = false : thermostat.powerSaving = true;
   thermostat.maximum();
+  thermostat.toggleEcoSymbol();
 });
 
 $('#powerUsage').click(function(){

@@ -1,6 +1,8 @@
 describe("Thermostat", function() {
   beforeEach(function() {
     thermostat = new Thermostat();
+
+
   });
 
   it("should have power saving is set by default", function() {
@@ -25,8 +27,9 @@ describe("Thermostat", function() {
     thermostat.increase();
     thermostat.reset();
     expect(thermostat.temperature).toEqual(20);
-  })
+  });
 
+  
   describe("temperature limits", function() {
 
     it("should throw an error if tries to decrease past 10", function(){
@@ -39,7 +42,7 @@ describe("Thermostat", function() {
       thermostat.temperature = 25;
       thermostat.increase();
       thermostat.maximum();
-      expect(thermostat.errorMessage).toEqual("The temperature can't be set above 25 with power saving on")
+      expect(thermostat.errorMessage).toEqual("The temperature can't be set <br> above 25 with power saving on")
     });
 
     it("should show an error message if the temperature increases past 32 if powerSaving off", function() {
@@ -47,7 +50,7 @@ describe("Thermostat", function() {
       thermostat.temperature = 32;
       thermostat.increase();
       thermostat.maximum();
-      expect(thermostat.errorMessage).toEqual("The temperature can't be set above 32 with power saving off")
+      expect(thermostat.errorMessage).toEqual("The temperature can't be set <br> above 32 with power saving off")
 
     });
 
