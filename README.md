@@ -51,5 +51,5 @@
 ### Type the command: start SpecRunner.html into the commandline 
 
 ## Running application online
-### Type the command: start index.html to open application online  into the commandline
+### Type the command: start index.html into the commandline to open application online  
 
