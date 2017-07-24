@@ -19,19 +19,19 @@ return this.temperature = 20;
 
 Thermostat.prototype.minimum = function() {
   if(this.temperature < 10){
-
-  throw  new Error("The temperature cannot be set below 10");
+    this.temperature = 10;
+   return this.minErrorMessage = "The temperature cannot be set below 10";
 };
 };
 
 Thermostat.prototype.maximum = function () {
   if(this.temperature > 25 && this.powerSaving == true) {
      this.temperature = 25;
-      return this.errorMessage = "The temperature can't be set <br> above 25 with power saving on";
+      return this.maxErrorMessage = "The temperature can't be set <br> above 25 with power saving on";
   }
   else if(this.temperature > 32 && this.powerSaving == false) {
      this.temperature = 32;
-     return this.errorMessage= "The temperature can't be set <br> above 32 with power saving off";
+     return this.maxErrorMessage= "The temperature can't be set <br> above 32 with power saving off";
   }
 };
 

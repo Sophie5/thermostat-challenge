@@ -2,15 +2,16 @@ $(document).ready(function() {
   var thermostat = new Thermostat();
 
  $('#currentTemperature').html(thermostat.temperature);
- $('#errorMessage').html(thermostat.errorMessage);
 
 
 $('#increase').click(function(){
   thermostat.increase();
   thermostat.maximum();
   $('#currentTemperature').html(thermostat.temperature);
-  $('#errorMessage').html(thermostat.errorMessage).show();
+  $('#maxErrorMessage').html(thermostat.maxErrorMessage).show();
   $('#energyUsage').html(thermostat.powerUsage()).hide();
+  $('#minErrorMessage').html(thermostat.minErrorMessage).hide();
+
 
 });
 
@@ -18,16 +19,18 @@ $('#decrease').click(function(){
   thermostat.decrease();
   thermostat.minimum();
   $('#currentTemperature').html(thermostat.temperature);
-  $('#errorMessage').html(thermostat.errorMessage).hide();
+  $('#maxErrorMessage').html(thermostat.maxErrorMessage).hide();
   $('#energyUsage').html(thermostat.powerUsage()).hide();
+  $('#minErrorMessage').html(thermostat.minErrorMessage).show();
 
 });
 
 $('#reset').click(function(){
   thermostat.reset();
   $('#currentTemperature').html(thermostat.temperature);
-  $('#errorMessage').html(thermostat.errorMessage).hide();
+  $('#maxmaxErrorMessage').html(thermostat.maxmaxErrorMessage).hide();
   $('#energyUsage').html(thermostat.powerUsage()).hide();
+  $('#minErrorMessage').html(thermostat.minErrorMessage).hide();
 
 });
 
@@ -40,7 +43,7 @@ $('#powerSaving').click(function(){
 $('#powerUsage').click(function(){
   thermostat.powerUsage();
   $('#energyUsage').html(thermostat.powerUsage()).show();
-  $('#errorMessage').html(thermostat.errorMessage).hide();
-
+  $('#maxErrorMessage').html(thermostat.maxErrorMessage).hide();
+  $('#minErrorMessage').html(thermostat.minErrorMessage).hide();
 });
 });
