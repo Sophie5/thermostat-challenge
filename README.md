@@ -45,11 +45,11 @@
 
 ## Installation 
 
-### Clone the repository to your computer  
+### Clone the repository  
 
 ## Testing 
 ### Type the command: start SpecRunner.html into the commandline 
 
 ## Running application online
-### Type the command: start index.html to open application online 
+### Type the command: start index.html to open application online  into the commandline
 
