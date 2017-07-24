@@ -18,11 +18,17 @@ $('#decrease').click(function(){
   thermostat.decrease();
   thermostat.minimum();
   $('#currentTemperature').html(thermostat.temperature);
+  $('#errorMessage').html(thermostat.errorMessage).hide();
+  $('#energyUsage').html(thermostat.powerUsage()).hide();
+
 });
 
 $('#reset').click(function(){
   thermostat.reset();
   $('#currentTemperature').html(thermostat.temperature);
+  $('#errorMessage').html(thermostat.errorMessage).hide();
+  $('#energyUsage').html(thermostat.powerUsage()).hide();
+
 });
 
 $('#powerSaving').click(function(){
