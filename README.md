@@ -1,8 +1,4 @@
-!DOCTYPE HTML
-<html>
-<body>
-# thermostat-challenge
-
+# Thermostat-challenge
 ## User stories
 
 ### As a user 
@@ -33,7 +29,27 @@
 ### So I don't use too much power 
 ### I want the max temperature with power saving on to be 25 and 32 with it off
 
-## Screenshot
- <img src="D:\Sophie\OneDrive\Pictures\Screenshots\2017-07-24(1)"></img>
-</body>
-</html>
+## Technologies
+
+### Backend
+#### JavaScript
+
+### Frontend
+#### JavaScript
+#### HTML
+#### CSS
+#### jQuery
+
+### Testing 
+#### Jasmine
+
+## Installation 
+
+### clone the repo 
+
+## Testing 
+### Type the command: start SpecRunner.html into the commandline 
+
+## Running application online
+### Type the command: start index.html to open application online 
+
