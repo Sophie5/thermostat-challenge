@@ -14,24 +14,30 @@ Thermostat.prototype.decrease = function() {
 };
 
 Thermostat.prototype.reset = function () {
-return this.temperature = 20;
+  return this.temperature = 20;
 };
 
 Thermostat.prototype.minimum = function() {
   if(this.temperature < 10){
     this.temperature = 10;
-   return this.minErrorMessage = "The temperature cannot <br> be set below 10";
-};
+    return this.minErrorMessage = "The temperature cannot <br> be set below 10";
+  }
+  else {
+    return this.minErrorMessage = " "
+  };
 };
 
 Thermostat.prototype.maximum = function () {
   if(this.temperature > 25 && this.powerSaving == true) {
-     this.temperature = 25;
-      return this.maxErrorMessage = "The temperature can't be set <br> above 25 with power saving on";
+    this.temperature = 25;
+    return this.maxErrorMessage = "The temperature can't be set <br> above 25 with power saving on";
   }
   else if(this.temperature > 32 && this.powerSaving == false) {
-     this.temperature = 32;
-     return this.maxErrorMessage= "The temperature can't be set <br> above 32 with power saving off";
+    this.temperature = 32;
+    return this.maxErrorMessage= "The temperature can't be set <br> above 32 with power saving off";
+  }
+  else{
+    return this.maxErrorMessage = " "
   }
 };
 
@@ -40,7 +46,7 @@ Thermostat.prototype.powerUsage = function () {
     return ("Power usage: Low");
   }
   else if (this.temperature < 25) {
-     return "Power usage: Medium";
+    return "Power usage: Medium";
   }
   else{
     return "Power usage: High";
@@ -54,4 +60,4 @@ Thermostat.prototype.toggleEcoSymbol = function() {
   else{
     return this.eco.style.display = 'none'
   }
- };
+};

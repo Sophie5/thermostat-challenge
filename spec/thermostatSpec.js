@@ -1,8 +1,6 @@
 describe("Thermostat", function() {
   beforeEach(function() {
     thermostat = new Thermostat();
-
-
   });
 
   it("should have power saving is set by default", function() {
