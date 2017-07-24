@@ -28,7 +28,7 @@ $('#decrease').click(function(){
 $('#reset').click(function(){
   thermostat.reset();
   $('#currentTemperature').html(thermostat.temperature);
-  $('#maxmaxErrorMessage').html(thermostat.maxmaxErrorMessage).hide();
+  $('#maxErrorMessage').html(thermostat.maxErrorMessage).hide();
   $('#energyUsage').html(thermostat.powerUsage()).hide();
   $('#minErrorMessage').html(thermostat.minErrorMessage).hide();
 
