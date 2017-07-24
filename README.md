@@ -1,3 +1,6 @@
+!DOCTYPE HTML
+<html>
+<body>
 # thermostat-challenge
 
 ## User stories
@@ -32,3 +35,5 @@
 
 ## Screenshot
  <img src="D:\Sophie\OneDrive\Pictures\Screenshots\2017-07-24(1)"></img>
+</body>
+</html>
