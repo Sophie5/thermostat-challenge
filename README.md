@@ -48,8 +48,8 @@
 ### Clone the repository  
 
 ## Testing 
-### Type the command: start SpecRunner.html into the commandline 
+### Type the command: start SpecRunner.html into the command line 
 
 ## Running application online
-### Type the command: start index.html into the commandline to open application online  
+### Type the command: start index.html into the command line to open the application online  
 
