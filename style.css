@@ -72,14 +72,24 @@
   font-size: 13px;
 }
 
-#errorMessage{
+#maxErrorMessage{
   position: absolute;
   left: 645px;
   top: 507px;
   font-size: 15px;
   font-weight: bold;
-  
+
 }
+
+#minErrorMessage{
+  position: absolute;
+  left: 645px;
+  top: 507px;
+  font-size: 15px;
+  font-weight: bold;
+
+}
+
 
 #ecoSymbol{
   position: absolute;

@@ -35,7 +35,7 @@ describe("Thermostat", function() {
       thermostat.temperature = 10;
       thermostat.decrease();
       thermostat.minimum();
-      expect(thermostat.minErrorMessage).toEqual("The temperature cannot be set below 10")
+      expect(thermostat.minErrorMessage).toEqual("The temperature cannot <br> be set below 10")
     });
 
     it("should show an error message if the temperature increases past 25 if powerSaving on", function() {

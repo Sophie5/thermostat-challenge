@@ -20,7 +20,7 @@ return this.temperature = 20;
 Thermostat.prototype.minimum = function() {
   if(this.temperature < 10){
     this.temperature = 10;
-   return this.minErrorMessage = "The temperature cannot be set below 10";
+   return this.minErrorMessage = "The temperature cannot <br> be set below 10";
 };
 };
 
