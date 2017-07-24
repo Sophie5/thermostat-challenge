@@ -45,7 +45,7 @@
 
 ## Installation 
 
-### clone the repo 
+### Clone the repository to your computer  
 
 ## Testing 
 ### Type the command: start SpecRunner.html into the commandline 
