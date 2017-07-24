@@ -30,6 +30,5 @@
 ### So I don't use too much power 
 ### I want the max temperature with power saving on to be 25 and 32 with it off
 
-##Screenshot
-
-<img src="D:\Sophie\OneDrive\Pictures\Screenshots\2017-07-24(1)"/>
+## Screenshot
+ <img src="D:\Sophie\OneDrive\Pictures\Screenshots\2017-07-24(1)"></img>
