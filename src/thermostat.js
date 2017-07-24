@@ -2,7 +2,7 @@
 function Thermostat() {
   this.temperature = 20;
   this.powerSaving = true;
-  this.eco = document.getElementById('ecoSymbol')
+  this.eco = document.getElementById('ecoSymbol');
 }
 
 Thermostat.prototype.increase = function() {
@@ -37,7 +37,7 @@ Thermostat.prototype.maximum = function () {
 
 Thermostat.prototype.powerUsage = function () {
   if(this.temperature < 18) {
-    return "Power usage: Low";
+    return ("Power usage: Low");
   }
   else if (this.temperature < 25) {
      return "Power usage: Medium";
@@ -47,11 +47,9 @@ Thermostat.prototype.powerUsage = function () {
   }
 };
 
-Thermostat.prototype.toggleEcoSymbol = function () {
-
+Thermostat.prototype.toggleEcoSymbol = function() {
   if(this.powerSaving === true){
     return this.eco.style.display = 'block'
-
   }
   else{
     return this.eco.style.display = 'none'

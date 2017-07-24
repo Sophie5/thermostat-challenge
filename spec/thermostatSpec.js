@@ -29,7 +29,6 @@ describe("Thermostat", function() {
     expect(thermostat.temperature).toEqual(20);
   });
 
-  
   describe("temperature limits", function() {
 
     it("should throw an error if tries to decrease past 10", function(){

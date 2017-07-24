@@ -9,7 +9,9 @@ $('#increase').click(function(){
   thermostat.increase();
   thermostat.maximum();
   $('#currentTemperature').html(thermostat.temperature);
-  $('#errorMessage').html(thermostat.errorMessage);
+  $('#errorMessage').html(thermostat.errorMessage).show();
+  $('#energyUsage').html(thermostat.powerUsage()).hide();
+
 });
 
 $('#decrease').click(function(){
@@ -31,6 +33,8 @@ $('#powerSaving').click(function(){
 
 $('#powerUsage').click(function(){
   thermostat.powerUsage();
-  $('#energyUsage').html(thermostat.powerUsage());
+  $('#energyUsage').html(thermostat.powerUsage()).show();
+  $('#errorMessage').html(thermostat.errorMessage).hide();
+
 });
 });
